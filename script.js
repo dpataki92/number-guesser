@@ -13,3 +13,11 @@ function compareGuesses(userGuess, computerGuess, target) {
 
     return userDiff === computerDiff ? true : (userDiff > computerDiff ? false : userDiff)
 }
+
+function updateScore(winner) {
+    winner === "human" ? humanScore += 1 : computerScore += 1;
+}
+
+function advanceRound() {
+    currentRoundNumber += 1;
+}
