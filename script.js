@@ -6,3 +6,10 @@ let currentRoundNumber = 1;
 function generateTarget() {
     return Math.floor(Math.random() * 10)
 }
+
+function compareGuesses(userGuess, computerGuess, target) {
+    const userDiff = Math.abs(target - userGuess);
+    const computerDiff = Math.abs(target - computerGuess);
+
+    return userDiff === computerDiff ? true : (userDiff > computerDiff ? false : userDiff)
+}
